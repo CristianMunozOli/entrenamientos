@@ -2,8 +2,7 @@ package com.entrenamientos.entrenamientos;
 
 import com.entrenamientos.entrenamientos.jugador.application.JugadorUseCases;
 import com.entrenamientos.entrenamientos.jugador.domain.Jugador;
-import com.entrenamientos.entrenamientos.jugador.domain.JugadorRepository;
-import com.entrenamientos.entrenamientos.jugador.infrastructure.JugadorRepositorySQL;
+import com.entrenamientos.entrenamientos.jugador.infrastructure.data.JugadorRepositorySQL;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
