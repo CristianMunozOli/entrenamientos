@@ -7,7 +7,7 @@ public class Jugador {
     private Date fechaNacimiento;
     private Integer recuperacion,resistencia,velocidad;
 
-    public Jugador(String apellidos, String dni, Date fechaNacimiento, String nombre, Integer recuperacion, Integer resistencia, Integer velocidad) {
+    public Jugador( String dni,String nombre,String apellidos , Date fechaNacimiento, Integer recuperacion, Integer resistencia, Integer velocidad) {
         this.apellidos = apellidos;
         this.dni = dni;
         this.fechaNacimiento = fechaNacimiento;

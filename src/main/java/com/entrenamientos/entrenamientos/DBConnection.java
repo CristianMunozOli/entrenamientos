@@ -1,4 +1,4 @@
-package com.cpifppiramide.actividad2.infrastructure.data;
+package com.entrenamientos.entrenamientos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +14,7 @@ public class DBConnection {
         if(connection == null) {
             try {
                 connection = DriverManager.getConnection(
-                        "jdbc:mysql://database-1.czxapucafvwz.us-east-1.rds.amazonaws.com",
+                        "jdbc:mysql://database-1.czxapucafvwz.us-east-1.rds.amazonaws.com/entrenamientos",
                         "admin", "potolo123");
             } catch (SQLException e) {
                 throw new RuntimeException(e);

@@ -13,13 +13,13 @@ public class JugadorUseCases {
     public List<Jugador> listaJugadores(){
         return this.jugadorRepository.listaJugadores();
     }
-    /*public List<Jugador> muestraJugador(Integer dni){
+    public Jugador muestraJugador(String dni){
         return this.jugadorRepository.muestraJugador(dni);
     }
-    public Jugador guardar(Jugador jugador){
-        return this.jugadorRepository.guardar(jugador);
+    public void guardar(Jugador jugador){
+         this.jugadorRepository.guardar(jugador);
     }
-    public String actualizar(String dni){
+    /*public String actualizar(String dni){
         return this.jugadorRepository.actualizar(dni);
     }*/
 }
