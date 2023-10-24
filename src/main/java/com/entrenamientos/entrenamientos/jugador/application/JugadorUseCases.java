@@ -19,6 +19,7 @@ public class JugadorUseCases {
     public void guardar(Jugador jugador){
          this.jugadorRepository.guardar(jugador);
     }
+    public void  borrarDatosTablaJugador(){this.jugadorRepository. borrarDatosTablaJugador();}
     /*public String actualizar(String dni){
         return this.jugadorRepository.actualizar(dni);
     }*/

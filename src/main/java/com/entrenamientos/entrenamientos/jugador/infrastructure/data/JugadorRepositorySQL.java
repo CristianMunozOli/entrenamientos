@@ -84,6 +84,15 @@ public class JugadorRepositorySQL implements JugadorRepository {
 
 
     }
+    public void borrarDatosTablaJugador(){
+        try {
+            PreparedStatement statement = DBConnection.getInstance().prepareStatement("delete from jugador");
+            statement.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 
   /*  @Override
     public String actualizar(String dni) {

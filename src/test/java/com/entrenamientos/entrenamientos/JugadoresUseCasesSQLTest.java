@@ -24,15 +24,9 @@ public class JugadoresUseCasesSQLTest {
     @Test
     void listaJugadores(){
         List<Jugador> jugadores = this.jugadorUseCases.listaJugadores();
-        assertEquals(,jugadores.size());
+        assertEquals(0,jugadores.size());
     }
-    @Test
-    void muestraJugador(){
-        String dni="12345678x";
-        //Jugador insertar = new Jugador()
-        Jugador jugador = this.jugadorUseCases.muestraJugador(dni);
-        assertEquals(jugador.getDni(),dni);
-    }
+
     @Test
     void  guardar(){
 
@@ -40,7 +34,7 @@ public class JugadoresUseCasesSQLTest {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
             String dateInString = "1989-10-30";
             Date date = formatter.parse(dateInString);
-            this.jugadorUseCases.guardar(new Jugador("18057241x","cristian","muñoz",date,1,1,1));
+            this.jugadorUseCases.guardar(new Jugador("12345678x","cristian","muñoz",date,1,1,1));
 
         } catch (ParseException e) {
             throw new RuntimeException(e);
@@ -48,9 +42,16 @@ public class JugadoresUseCasesSQLTest {
         List<Jugador> jugadores = this.jugadorUseCases.listaJugadores();
         assertEquals(1,jugadores.size());
     }
+    @Test
+    void muestraJugador(){
+        String dni="12345678x";
+        guardar();
+        Jugador jugador = this.jugadorUseCases.muestraJugador(dni);
+        assertEquals(jugador.getDni(),dni);
+    }
     @AfterEach
     void muestraJugadorLimpiar(){
-
+    this.jugadorUseCases.borrarDatosTablaJugador();
     }
 
 
